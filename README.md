@@ -18,7 +18,11 @@ individual knowing *S*, it is unfortunate that *S* remains vulnerable when *k*
 shares are generated, as well as when these shares are used to compute *S*, in
 order to authorize some action in a computer system. In order to reduce this
 threat, we can compute *S* in a Trusted Execution Environment (TEE), using
-[Enarx](https://enarx.dev/).
+[Enarx](https://enarx.dev/), which reduces the size of the trusted computing
+base where *S* is exposed at secret sharing and reconstruction time.
+
+A description of Enarx's threat model can be found
+[here.](https://enarx.dev/docs/Technical/Threat)
 
 ## BUILD
 
