@@ -1,5 +1,5 @@
-//use std::io;
 use clap::Parser;
+use std::io;
 extern crate threshold_secret_sharing as tss;
 
 #[derive(Parser, Debug)]
@@ -10,22 +10,6 @@ struct Args {
 }
 
 fn main() {
-    //    println!(
-    //        "\nWelcome to the Strategic Air Command Ground Based Strategic Deterrance Launch System\n"
-    //    );
-    //
-    //    println!("PEACE IS OUR PROFESSION\n");
-    //
-    //    println!("Enter a valid LAUNCH Key:");
-    //
-    //    let mut secret = String::new();
-    //
-    //    io::stdin()
-    //        .read_line(&mut secret)
-    //        .expect("Failed to read line");
-    //
-    //    let secret: i64 = secret.trim().parse().expect("Turn your KEY, SIR!");
-
     let args = Args::parse();
 
     let launchcode = args.launchcode;
@@ -45,6 +29,22 @@ fn main() {
     let shares: &[i64] = &all_shares[0..reconstruct_share_count];
     let recovered_launchcode = tss.reconstruct(&indices, shares);
 
-    println!("The LAUNCH Keys are {:#?}", shares);
+    println!("\nThe LAUNCH Keys are {:#?}", shares);
     assert_eq!(recovered_launchcode, launchcode);
+
+    println!(
+        "\nWelcome to the Strategic Air Command Ground Based Strategic Deterrance Launch System\n"
+    );
+
+    println!("PEACE IS OUR PROFESSION\n");
+
+    println!("Enter a valid LAUNCH Key:");
+
+    let mut key = String::new();
+
+    io::stdin()
+        .read_line(&mut key)
+        .expect("Failed to read line");
+
+    let key: i64 = key.trim().parse().expect("Turn your KEY, SIR!");
 }
