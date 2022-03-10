@@ -26,16 +26,16 @@ A description of Enarx's threat model can be found
 
 ## BUILD
 
-To run shamir in a TEE, first install
+To run Shamir in a TEE, first install
 [Enarx](https://enarx.dev/docs/Installation/Introduction) and its dependencies.
 
-Compile shamir to a WebAssembly target:
+Compile Shamir to a WebAssembly target:
 
 `cargo build --release --target=wasm32-wasi`
 
 ## USAGE
 
-To run shamir in an Enarx Keep:
+To run Shamir in an Enarx Keep:
 
 `enarx run target/wasm32-wasi/release/shamir.wasm`
 
