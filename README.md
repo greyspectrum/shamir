@@ -31,6 +31,10 @@ Compile shamir to a WebAssembly target:
 
 ## USAGE
 
+To run shamir in an Enarx Keep:
+
+`enarx run target/wasm32-wasi/release/shamir.wasm`
+
 ```
 shamir --help
 shamir 0.1.0
