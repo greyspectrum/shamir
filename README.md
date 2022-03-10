@@ -9,7 +9,7 @@ that *S* is reconstructable from a threshold of *k* pieces, but knowledge of
 the threat of authorized insiders abusing their privileged access to a system,
 since a malicious insider must compromise a threshold of her colleagues' secret
 shares, or induce them to collaborate with her, in order to reconstruct *S*. A
-common example of this concept in action is the ["two man
+common example of this concept in action is the so-called ["two man
 rule"](https://en.wikipedia.org/wiki/Two-man_rule) used to control the use of
 nuclear weapons.
 
