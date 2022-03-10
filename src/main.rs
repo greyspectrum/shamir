@@ -45,4 +45,10 @@ fn main() {
         .expect("Failed to read line");
 
     let key: i64 = key.trim().parse().expect("Turn your KEY, SIR!");
+
+    if shares.contains(&key) {
+        println!("\nLAUNCH IS AUTHORIZED");
+    } else {
+        println!("\nAUTHENTICATION FAILED");
+    }
 }
