@@ -38,16 +38,29 @@ fn main() {
     println!("PEACE IS OUR PROFESSION\n");
     println!("Enter a valid LAUNCH Key:");
 
-    let mut key = String::new();
+    let mut key1 = String::new();
 
     io::stdin()
-        .read_line(&mut key)
+        .read_line(&mut key1)
         .expect("Failed to read line");
 
-    let key: i64 = key.trim().parse().expect("Turn your KEY, SIR!");
+    let key1: i64 = key1.trim().parse().expect("Turn your KEY, SIR!");
 
-    if shares.contains(&key) {
-        println!("\nLAUNCH IS AUTHORIZED");
+    if shares.contains(&key1) {
+        println!("Enter a valid LAUNCH Key:");
+        let mut key2 = String::new();
+
+        io::stdin()
+            .read_line(&mut key2)
+            .expect("Failed to read line");
+
+        let key2: i64 = key2.trim().parse().expect("Turn your KEY, SIR!");
+
+        if shares.contains(&key2) {
+            println!("\nLAUNCH IS AUTHORIZED");
+        } else {
+            println!("\nAUTHENTICATION FAILED");
+        }
     } else {
         println!("\nAUTHENTICATION FAILED");
     }
