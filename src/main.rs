@@ -30,7 +30,7 @@ fn main() {
 
     let launchcode = args.launchcode;
 
-    let ref tss = tss::shamir::ShamirSecretSharing {
+    let tss = tss::shamir::ShamirSecretSharing {
         threshold: 9,
         share_count: 20,
         prime: 41, // any large enough prime will do
