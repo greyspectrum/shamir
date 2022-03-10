@@ -35,9 +35,7 @@ fn main() {
     println!(
         "\nWelcome to the Strategic Air Command Ground Based Strategic Deterrance Launch System\n"
     );
-
     println!("PEACE IS OUR PROFESSION\n");
-
     println!("Enter a valid LAUNCH Key:");
 
     let mut key = String::new();
