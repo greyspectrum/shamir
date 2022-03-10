@@ -1,6 +1,6 @@
 # shamir
 
-This is a simple demonstration of threshold scheme, using Adi Shamir's [secret
+This is a simple demonstration of a threshold scheme, using Adi Shamir's [secret
 sharing](http://web.mit.edu/6.857/OldStuff/Fall03/ref/Shamir-HowToShareASecret.pdf).
 
 Shamir secret sharing enables us to divide a secret *S*, into *k* shares, such
