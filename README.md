@@ -4,8 +4,8 @@ This is a simple demonstration of threshold scheme, using Adi Shamir's [secret
 sharing](http://web.mit.edu/6.857/OldStuff/Fall03/ref/Shamir-HowToShareASecret.pdf).
 
 Shamir secret sharing enables us to divide a secret *S*, into *k* shares, such
-that *S* is reconstructable from a threshold of *k* pieces, but knowledge of *k*
-- 1 reveals nothing about *S*. Threshold schemes can be used to mitigate the
+that *S* is reconstructable from a threshold of *k* pieces, but knowledge of *k* -
+1 reveals nothing about *S*. Threshold schemes can be used to mitigate the
 threat of authorized insiders abusing their privileged access to a system, since
 a malicious insider must compromise a threshold of her colleagues' secret
 shares, or induce them to collaborate with her, in order to reconstruct *S*. A
