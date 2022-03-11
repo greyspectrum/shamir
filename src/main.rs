@@ -51,7 +51,7 @@ fn main() {
     let key1: i64 = key1.trim().parse().expect("Turn your KEY, SIR!");
 
     // Determine if the shares are in the set of shares
-    // Success is faked here
+    // Reconstruction is faked here
     if shares.contains(&key1) {
         println!("Enter a valid LAUNCH Key:");
         let mut key2 = String::new();
