@@ -10,6 +10,9 @@ struct Args {
 }
 
 fn main() {
+
+    // The shamir secret to be split must be passed 
+    // in as and argument
     let args = Args::parse();
 
     let launchcode = args.launchcode;
@@ -25,6 +28,7 @@ fn main() {
     let reconstruct_share_count = 10;
     assert!(reconstruct_share_count >= tss.reconstruct_limit());
 
+    // Reconstruct the secret from the shares
     let indices: Vec<usize> = (0..reconstruct_share_count).collect();
     let shares: &[i64] = &all_shares[0..reconstruct_share_count];
     let recovered_launchcode = tss.reconstruct(&indices, shares);
@@ -32,12 +36,14 @@ fn main() {
     println!("\nThe LAUNCH Keys are {:#?}", shares);
     assert_eq!(recovered_launchcode, launchcode);
 
+    // A friendly welcome
     println!(
         "\nWelcome to the Strategic Air Command Ground Based Strategic Deterrance Launch System\n"
     );
     println!("PEACE IS OUR PROFESSION\n");
     println!("Enter a valid LAUNCH Key:");
 
+    // Read the shares in as user input
     let mut key1 = String::new();
 
     io::stdin()
@@ -46,6 +52,8 @@ fn main() {
 
     let key1: i64 = key1.trim().parse().expect("Turn your KEY, SIR!");
 
+    // Determine if the shares are in the set of shares
+    // Success is faked here
     if shares.contains(&key1) {
         println!("Enter a valid LAUNCH Key:");
         let mut key2 = String::new();
