@@ -1,6 +1,6 @@
 use clap::Parser;
 use std::io;
-extern crate threshold_secret_sharing as tss;
+use threshold_secret_sharing as tss;
 
 #[derive(Parser, Debug)]
 #[clap(author, version, about, long_about = None)]
