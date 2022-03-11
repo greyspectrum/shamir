@@ -11,8 +11,7 @@ struct Args {
 
 fn main() {
 
-    // The shamir secret to be split must be passed 
-    // in as and argument
+    // Pass the shamir secret as an argument 
     let args = Args::parse();
 
     let launchcode = args.launchcode;
