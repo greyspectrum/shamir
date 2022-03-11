@@ -10,7 +10,6 @@ struct Args {
 }
 
 fn main() {
-
     // Pass the shamir secret as an argument
     let args = Args::parse();
 
